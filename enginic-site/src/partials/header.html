@@ -1,0 +1,28 @@
+<header class="site-header">
+  <div class="wrap">
+    <a href="/" class="brand"><img src="/assets/images/logo.png" alt="税理士法人Enginic" width="150" height="51"></a>
+    <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" data-nav-toggle>&#9776;</button>
+    <nav>
+      <ul class="nav-links" data-nav-links>
+        <li><a href="/about/" {{ACTIVE_ABOUT}}>会社概要</a></li>
+        <li><a href="/service/" {{ACTIVE_SERVICE}}>事業内容</a></li>
+        <li><a href="/pricing/" {{ACTIVE_PRICING}}>料金表</a></li>
+        <li><a href="/members/" {{ACTIVE_MEMBERS}}>役員紹介</a></li>
+        <li><a href="/blog/" {{ACTIVE_BLOG}}>コラム</a></li>
+        <li><a href="/access/" {{ACTIVE_ACCESS}}>アクセス</a></li>
+        <li><a href="/contact/" class="nav-cta" {{ACTIVE_CONTACT}}>お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('[data-nav-toggle]');
+  var nav = document.querySelector('[data-nav-links]');
+  if(!btn||!nav) return;
+  btn.addEventListener('click', function(){
+    var open = nav.classList.toggle('mobile-open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+})();
+</script>

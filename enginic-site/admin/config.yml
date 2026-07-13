@@ -1,0 +1,28 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Netlify Identity + Git Gateway 経由でGitHubリポジトリに直接コミットされます。
+# セットアップ方法は README.md を参照してください。
+
+media_folder: "assets/images/blog"
+public_folder: "/assets/images/blog"
+
+publish_mode: simple
+locale: "ja"
+
+collections:
+  - name: "blog"
+    label: "コラム記事"
+    label_singular: "記事"
+    folder: "content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    format: "frontmatter"
+    fields:
+      - { label: "タイトル", name: "title", widget: "string" }
+      - { label: "公開日", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "タグ", name: "tag", widget: "string", default: "お知らせ" }
+      - { label: "一覧・SEO用の要約", name: "excerpt", widget: "text" }
+      - { label: "サムネイル画像(任意)", name: "thumbnail", widget: "image", required: false }
+      - { label: "本文", name: "body", widget: "markdown" }

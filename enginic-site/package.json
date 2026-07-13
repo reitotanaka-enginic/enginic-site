@@ -1,0 +1,13 @@
+{
+  "name": "enginic-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "税理士法人Enginic 公式サイト（依存ライブラリなしの静的サイトジェネレーター）",
+  "scripts": {
+    "build": "node build.js",
+    "serve": "node serve.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
