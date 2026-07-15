@@ -698,6 +698,8 @@ p { margin: 0 0 1em; }
   font-size: 16px;
   color: var(--ink);
   margin: 0 0 32px;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
 }
 .pricing-lead strong { color: var(--ember); }
 
