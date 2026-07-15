@@ -860,3 +860,11 @@ p { margin: 0 0 1em; }
   font-weight: 700;
   flex-shrink: 0;
 }
+
+/* Blue text link */
+.link-blue {
+  color: #1a6dcc;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.link-blue:hover { color: #12539c; }
